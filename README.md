@@ -1,24 +1,96 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version '2.3.1'
 
-Things you may want to cover:
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|id|integer||
+|name|string|null:false|
+|name_kana|string|null:false|
+|password|string|null:false|
+|grade_id|integer|null:false|
+|class_day_id|integer|null:false|
+|class_time_id|integer|null:false|
+|email|string|null:false|
+|telephone|integer|null:false|
+|zip_code|integer|null:false|
+|adress|string|null:false|
+|introduction|text||
+|birth_month|integer|null:false|
+|birth_day|integer|null:false|
 
-* Ruby version
+### Association
+- has_many :images
+- belongs_to :grade
+- belongs_to :class_day
+- belongs_to :class_time
 
-* System dependencies
+## gradesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|id|||
+|grade|string|null:false|
 
-* Configuration
+### Association
+- has_many :users
 
-* Database creation
+## class_daysテーブル
 
-* Database initialization
+|Column|Type|Options|
+|------|----|-------|
+|id|||
+|class_day|string|null:false|
 
-* How to run the test suite
+### Association
+- has_many :users
 
-* Services (job queues, cache servers, search engines, etc.)
+## class_timesテーブル
 
-* Deployment instructions
+|Column|Type|Options|
+|------|----|-------|
+|id|||
+|class_time|time|null:false|
 
-* ...
+### Association
+- has_many :users
+
+## iamgesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|id|||
+|image|text|null:false|
+|user_id|integer|null:false|
+|grade_id|integer|null:false|
+|class_day_id|integer|null:false|
+|class_time_id|integer|null:false|
+
+### Association
+- belongs_to :user
+- belongs_to :grade
+- belongs_to :class_day
+- belongs_to :class_time
+
+## likesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|id|||
+|image_id|integer|null:false|
+|user_id|integer|null:false|
+
+### Association
+- belongs_to :image
+- belongs_to :user
+
+## commentsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|id|||
+|comment|text|null:false|
+|user_id|integer|null:false|
+
+### Association
+- belongs_to :user
