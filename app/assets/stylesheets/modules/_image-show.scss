@@ -1,0 +1,36 @@
+.pickup-container{
+  height: 950px;
+  position: relative;
+}
+
+.pickup_user_name {
+  height: 100px;
+  font-size: 30px;
+  padding: 30px;
+  color: #a046a0;
+  font-weight: 600;
+}
+
+.pickup-image{
+  position: absolute;
+  height: 600px;
+  width: 700px;
+  max-width: 100%;
+  object-fit: cover;
+  transform: rotate(90deg);
+  border-radius: 20px;
+  top: 210px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.pickup_date{
+  position: absolute;
+  height: 100px;
+  font-size: 30px;
+  padding: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
