@@ -1,0 +1,22 @@
+%nav.nav-extended.light-green
+  .nav-wrappers
+    %a.class-logo{href: "/"} きょうしつのサイト
+    %a.sidenav-trigger{"data-target" => "mobile-demo", :href => "#"}
+      %i.material-icons menu
+    %ul#nav-mobile.right.hide-on-med-and-down
+      %li
+        %a{:href => "sass.html"} 登録
+      %li
+        %a{:href => "badges.html"} ログイン
+      %li
+        %a{:href => "collapsible.html"} ログアウト
+  .nav-content
+    %ul.tabs.tabs-transparent
+      %li.tabu
+        %a{:href => "#test1"} お知らせ
+      %li.tabu
+        %a{:href => "#test2"} おけいこ日
+      %li.tabu
+        %a{:href => "#test3"} アルバム
+      %li.tabu
+        %a{:href => "#test4"} 進級管理

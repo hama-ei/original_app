@@ -1,0 +1,20 @@
+= render partial: "header"
+%section.pickup-container
+  %h2.pickup-head
+    &#x2b50;&#x2b50;&#x2b50;&#x2b50;&#x2b50;  今週のいちばん  &#x2b50;&#x2b50;&#x2b50;&#x2b50;&#x2b50;
+  %section.item-boxs
+    %h3.pickup-days 月曜日のおけいこ
+    %ul
+      - @images.where(class_day_id:1).each do |image|
+        = render partial: 'images/image-box', locals: {image:image}
+  %section.item-boxs
+    %h3.pickup-days 火曜日のおけいこ
+    %ul
+      - @images.where(class_day_id:2).limit(20).each do |image|
+        = render partial: 'images/image-box', locals: {image:image}
+  %section.item-boxs
+    %h3.pickup-days 金曜日のおけいこ
+    %ul
+      - @images.where(class_day_id:3).limit(20).each do |image|
+        = render partial: 'images/image-box', locals: {image:image}
+= render partial: "footer"

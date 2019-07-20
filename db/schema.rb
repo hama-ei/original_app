@@ -12,6 +12,10 @@
 
 ActiveRecord::Schema.define(version: 2019_07_17_043600) do
 
+  create_table "class_days", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "class_day", null: false
+  end
+
   create_table "class_times", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.time "class_time", null: false
   end
@@ -21,10 +25,6 @@ ActiveRecord::Schema.define(version: 2019_07_17_043600) do
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "create_class_days", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "class_day", null: false
   end
 
   create_table "grades", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2019_07_17_043600) do
     t.integer "grade_id", null: false
     t.integer "class_day_id"
     t.integer "class_time_id", null: false
+    t.date "date", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

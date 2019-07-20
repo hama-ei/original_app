@@ -1,0 +1,11 @@
+%li.item-box
+  = link_to image_path(image) do
+    = image_tag"/images/#{image.image}", alt: ""
+    .item-box-text
+      .text-box
+        %h4
+          #{image.user.name}さん
+      .nice
+        = fa_icon "heart"
+        %span
+        #{image.likes.count}

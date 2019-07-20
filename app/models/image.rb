@@ -1,4 +1,5 @@
 class Image < ApplicationRecord
+  has_many   :likes
   belongs_to :user
   belongs_to :grade
   belongs_to :class_day
