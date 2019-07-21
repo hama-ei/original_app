@@ -1,0 +1,30 @@
+.pickup-container3 {
+  background-color: #fbf8e9;
+  text-align: center;
+  margin:0 auto;
+  padding: 0 150px 40px;
+  height: 1000px;
+}
+.album-box{
+  position: relative;
+  margin: 0 auto;
+  float: left;
+  margin: 10px 40px;
+  position: relative;
+  height: 250px;
+  width: 210px;
+  background-color: white;
+  text-align: left;
+  border-radius: 20px;
+}
+img.album_image{
+  height: 210px;
+  width: 210px;
+}
+
+.album-text-box{
+  position: absolute;
+  bottom: 10px;
+  left: 58px;
+  color: black;
+}

@@ -5,6 +5,6 @@
   .pickup_date
     #{@image.date}
   .pickup_user_album_name
-    = link_to do
+    = link_to user_album_show_path(@image.user) do
       #{@image.user.name}さんのアルバムを見る
 = render partial: "footer"
