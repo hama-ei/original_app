@@ -1,0 +1,80 @@
+.color-container
+.signup-container
+  .signup-container2
+    .signup_title 登録フォーム
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = render "devise/shared/error_messages", resource: resource
+
+      .field
+        = f.label :お名前, class: "field"
+        %br/
+        = f.text_field :name, palceholder:"入力してください"
+
+      .field
+        = f.label :"お名前(カナ)", class: "field"
+        %br/
+        = f.text_field :name_kana, palceholder:"入力してください"
+
+      .field
+        = f.label :パスワード, class: "field"
+        %br/
+        = f.password_field :password, autocomplete: "new-password", palceholder: "６文字以上"
+
+      .field
+        = f.label :確認用パスワード, class: "field"
+        %br/
+        = f.password_field :password_confirmation, autocomplete: "new-password", palceholder: "６文字以上"
+
+      .field
+        = f.label :学年, class: "field"
+        %br/
+        = f.collection_select :grade_id, Grade.all, :id, :grade,{prompt: '選択してください'}, class: "form-choice"
+
+      .field
+        = f.label :お稽古の曜日, class: "field"
+        %br/
+        = f.collection_select :class_day_id, ClassDay.all, :id, :class_day,{prompt: '選択してください'}, class: "form-choice"
+
+      .field
+        = f.label :お稽古の時間, class: "field"
+        %br/
+        = f.collection_select :class_time_id, ClassTime.all, :id, :class_time,{prompt: '選択してください'}, class: "form-choice"
+
+      .field
+        = f.label :メールアドレス, class: "field"
+        %br/
+        = f.email_field :email, autofocus: true, autocomplete: "email"
+
+      .field
+        = f.label :電話番号, class: "field"
+        %br/
+        = f.text_field :telephone, palceholder: "例)09012345678"
+
+      .field
+        = f.label :郵便番号, class: "field"
+        %br/
+        = f.text_field :zip_code, palceholder: "例)123456"
+
+      .field
+        = f.label :住所, class: "field"
+        %br/
+        = f.text_field :address, palceholder: "入力してください"
+
+      .field
+        = f.label :誕生日, class: "field"
+        %br/
+        %ul.birth--field
+          %li.birth--list
+            .birth--select
+              = f.select :birth_month,[*(1..12)],prompt:"---"
+            .birth_month
+              月
+          %li.birth--list
+            .birth--select
+              = f.select :birth_day,[*(1..31)],prompt:"---"
+            .birth_day
+              日
+      .actions
+        = f.submit "Sign up",class: :sign_submit
+
+.color-container

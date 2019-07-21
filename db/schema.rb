@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_17_043600) do
+ActiveRecord::Schema.define(version: 2019_07_21_161858) do
 
   create_table "class_days", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "class_day", null: false
   end
 
   create_table "class_times", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.time "class_time", null: false
+    t.text "class_time", null: false
   end
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -52,8 +52,8 @@ ActiveRecord::Schema.define(version: 2019_07_17_043600) do
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "name_kana", null: false
-    t.string "password", default: "", null: false
-    t.integer "grade_year", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.integer "grade_id", null: false
     t.integer "class_day_id", null: false
     t.integer "class_time_id", null: false
     t.string "email", default: "", null: false
@@ -65,6 +65,8 @@ ActiveRecord::Schema.define(version: 2019_07_17_043600) do
     t.integer "birth_day", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "remember_created_at"
+    t.datetime "reset_password_sent_at"
   end
 
 end

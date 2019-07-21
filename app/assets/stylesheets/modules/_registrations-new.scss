@@ -1,0 +1,95 @@
+.color-container{
+  height: 80px;
+  width: 100%;
+  background-color: #8bc34a;
+}
+
+.signup-container{
+  padding: 5px;
+  background-color:#fbf8e9;
+}
+
+.signup-container2{
+  width: 50%;
+  height: auto;
+  margin: 80px auto;
+  background-color: white;
+}
+
+.signup_title {
+  font-size: 25px;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.field {
+  width: 350px;
+  padding: 0 auto;
+  margin: 50px auto;
+}
+
+label.field {
+  font-size: 15px;
+  color: black;
+}
+
+#user_name,#user_name_kana,#user_encrypted_password,#user_email,#user_telephone,#user_zip_code,#user_address{
+  text-align: center;
+  font-size: 20px;
+}
+
+select.form-choice {
+  border: 1px solid darkgray;
+  width: 250px;
+  height: 50px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 2px;
+  background-color: white;
+}
+
+ul.birth--field {
+  position: relative;
+  width: 350px;
+  height: 50px;
+  display: flex;
+}
+
+.birth--select {
+  width: 180px;
+}
+
+select#user_birth_month,select#user_birth_day{
+  position: relative;
+  border: 1px solid darkgray;
+  width: 146px;
+  height: 50px;
+  display: inline-block;
+  border-radius: 2px;
+  background-color: white;
+}
+
+.birth_month{
+  position: absolute;
+  top: 30px;
+  right: 180px;
+}
+
+.birth_day{
+  position: absolute;
+  top: 30px;
+  right: 0px;
+}
+
+.actions {
+  padding: 50px 260px 150px;
+  width: auto;
+  height: 70px;
+}
+
+input.sign_submit {
+  height: 70px;
+  width: 160px;
+  background-color: #8bc34a;
+  color: white;
+}

@@ -4,12 +4,17 @@
     %a.sidenav-trigger{"data-target" => "mobile-demo", :href => "#"}
       %i.material-icons menu
     %ul#nav-mobile.right.hide-on-med-and-down
-      %li
-        %a{:href => "sass.html"} 登録
-      %li
-        %a{:href => "badges.html"} ログイン
-      %li
-        %a{:href => "collapsible.html"} ログアウト
+      - if user_signed_in?
+        %li
+          .button
+        %li
+          %a{href: "/users/sign_out" ,method: "delete"} ログアウト
+      -else
+        %li
+          %a.button2{href: "/users/sign_up"} 新規登録
+        %li
+          %a.button2{href: "/users/sign_in",method: :post} ログイン
+      
   .nav-content
     %ul.tabs.tabs-transparent
       %li.tabu
