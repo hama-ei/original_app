@@ -1,14 +1,18 @@
 .nav-wrappers{
+  position: relative;
   min-height: 95px;
 }
 nav .class-logo{
   position: absolute;
-  width: 100vw;
+  width: 510px;
   color: #fff;
   display: inline-block;
   font-size: 3.5rem;
   text-align: center;
   padding: 17px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 .tabs{
   left: 24%;
