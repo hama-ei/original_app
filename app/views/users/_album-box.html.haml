@@ -1,0 +1,10 @@
+.album-box
+  = link_to image_path(image) do
+    = image_tag"/images/#{image.image}", alt: "", class: "album_image"
+    .album-box-text
+      .album-text-box
+        #{image.date}
+      .nice
+        = fa_icon "heart"
+        %span
+        #{image.likes.count}

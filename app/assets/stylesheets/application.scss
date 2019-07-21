@@ -1,7 +1,9 @@
+@import "materialize";
 @import "font-awesome";
 @import "./modules/header";
 @import "./modules/image-index";
 @import "./modules/image-show";
+@import "./modules/album_show";
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -19,5 +21,3 @@
  *= require_self
  *= require_tree .
  */
-
-@import "materialize";
