@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_17_043600) do
+ActiveRecord::Schema.define(version: 2019_07_21_065330) do
 
   create_table "class_days", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "class_day", null: false
@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 2019_07_17_043600) do
     t.string "name", null: false
     t.string "name_kana", null: false
     t.string "password", default: "", null: false
-    t.integer "grade_year", null: false
+    t.integer "grade_id", null: false
     t.integer "class_day_id", null: false
     t.integer "class_time_id", null: false
     t.string "email", default: "", null: false
