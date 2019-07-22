@@ -1,11 +1,12 @@
 class ApplicationController < ActionController::Base
 
-  protect_from_forgery with: :exception
   before_action :basic
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :authenticate_user!, except: [:index]
+  protect_from_forgery with: :exception
 
   private
+  
   def basic
     authenticate_or_request_with_http_basic do |username, password|
       username == "kyousitu" && password == "2019"
