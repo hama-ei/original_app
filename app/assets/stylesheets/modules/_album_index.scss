@@ -1,0 +1,47 @@
+.pickup-container4 {
+  background-color: #fbf8e9;
+  text-align: center;
+  margin:0 auto;
+  padding: 0 150px 40px;
+  height: auto;
+}
+
+p.title {
+  margin: 0;
+  padding: 30px;
+  font-size: 30px;
+  color: lightseagreen;
+}
+
+.circle-1,
+.circle-2,
+.circle-3 {
+  color: #fff;
+  padding: 80px 50px;
+  width: 176px;
+  height: 165px;
+}
+.circle-1 {
+  background: rgb(245, 160, 160);
+  border-radius: 50% 50% 50% 70%/50% 50% 70% 60%;
+}
+.circle-2 {
+  background: rgb(248, 178, 98);
+  border-radius: 80% 30% 50% 50%/50%;
+}
+.circle-3 {
+  background: rgb(252, 220, 115);
+  border-radius: 40% 40% 50% 40%/30% 50% 50% 50%;
+}
+
+@media (max-width: 600px) {
+  body {
+    flex-direction: column;
+  }
+}
+
+.user_names{
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 80px;
+}

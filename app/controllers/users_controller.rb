@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
 
+  def album_index
+    @users = User.all
+  end
+
   def album_show
     @user = User.find(params[:id])
     @images = Image.where(user_id: params[:id])
