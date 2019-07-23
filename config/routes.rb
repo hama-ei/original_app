@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   root 'images#index'
 
   resources :images 
+  resources :managements
 
   get "users/album", to: 'users#album_index', as: 'user_album_index'
   get "users/album/:id", to: 'users#album_show',  as: 'user_album_show'
