@@ -8,6 +8,9 @@ class ImagesController < ApplicationController
     @image = Image.find(params[:id])
     @like = Like.new
   end
+
+  def new
+  end
   
   def album_index
     @users = User.all
@@ -25,7 +28,6 @@ class ImagesController < ApplicationController
       :name, :name_kana, :password, :grade_year, :class_day_id, :class_time_id, :email, :telephone, :zip_code, :adress, :introduction, :birth_month, :birth_day, :created_at, :updated_at)
   end
 
-  private
   def image_params
     params.require(:image).permit(:image,:user_id)
   end
