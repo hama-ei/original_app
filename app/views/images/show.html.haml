@@ -1,9 +1,9 @@
 = render partial: "header"
 .pickup-container2
   .pickup_user_name #{@user.name}さん
-  = image_tag"/images/#{@user.images[0]&.image}", alt: "", class: "pickup-image"
+  = image_tag"#{@user.images.order("created_at DESC")[0]&.image}", alt: "", class: "pickup-image"
   .pickup_date
-    #{@user.images[0]&.date}
+    #{@user.images[0]&.date_year}年#{@user.images[0]&.date_month}月#{@user.images[0]&.date_day}日
   .pickup_user_album_name
     = link_to user_album_show_path(@user) do
       #{@user.name}さんのアルバムを見る

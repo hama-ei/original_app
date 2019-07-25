@@ -73,3 +73,4 @@ gem 'material_icons'
 gem "font-awesome-rails"
 gem 'erb2haml'
 gem 'carrierwave'
+gem 'simple_calendar', '~> 2.0'

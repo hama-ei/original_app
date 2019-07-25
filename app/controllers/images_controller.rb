@@ -10,11 +10,11 @@ class ImagesController < ApplicationController
   end
 
   def new
-    @image = current_user.images.new
+    @image = Image.new
   end
 
   def create
-    @image = current_user.images.new(image_params)
+    @image = Image.new(image_params)
     @image.save
     redirect_to root_path
   end
