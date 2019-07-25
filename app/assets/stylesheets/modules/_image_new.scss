@@ -15,11 +15,21 @@ h2.new_image_head {
   padding: 40px;
 }
 
-.field1{
-  width: 350px;
+.field1 {
+  width: 370px;
   padding: 0 auto;
   margin: 50px auto;
-  height: 120px;
+  height: 300px;
+  display: block;
+  position: relative;
+}
+
+img.imageview {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 110px;
 }
 
 .field2{
@@ -34,8 +44,6 @@ h2.new_image_head {
   padding: 0 auto;
   margin: 50px auto;
   height: 200px;
-  // background: $filefield;
-  // border: 1px dashed $formborder;
 }
 
 input#image_image {
@@ -88,4 +96,11 @@ ul.date--field {
   position: absolute;
   top: 43px;
   right: -10px;
+}
+
+.image_submit{
+  height: 70px;
+  width: 160px;
+  background-color: #8bc34a;
+  color: white;
 }
