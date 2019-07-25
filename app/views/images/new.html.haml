@@ -7,13 +7,13 @@
       .field1
         = f.label :"作品画像", class: "field"
         %br/
-        = f.file_field :image ,class:"imageview"
-
+        = f.file_field :image, class: "field"
+        .imageview
+          = image_tag @image.image.to_s, class: "imageview"
       .field2
         = f.label :"生徒名", class: "field"
         %br/
         = f.collection_select :user_id, User.all, :id, :name,{prompt: '---'}, class: "select__default"
-
       .field3
         = f.label :"作品データ", class: "field"
         %br/
