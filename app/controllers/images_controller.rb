@@ -1,16 +1,24 @@
 class ImagesController < ApplicationController
 
   def index
-    @images = Image.order("date DESC")
+    @users = User.includes(:images)
   end
 
   def show
-    @image = Image.find(params[:id])
+    @user =User.includes(:images).find(params[:id])
     @like = Like.new
   end
 
   def new
+    @image = current_user.images.new
   end
+
+  def create
+    @image = current_user.images.new(image_params)
+    @image.save
+    redirect_to root_path
+  end
+
   
   def album_index
     @users = User.all
@@ -29,6 +37,7 @@ class ImagesController < ApplicationController
   end
 
   def image_params
-    params.require(:image).permit(:image,:user_id)
+    params.require(:image).permit(:image,:user_id,:date_year,:date_month,:date_day)
   end
+
 end

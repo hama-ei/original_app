@@ -72,3 +72,4 @@ gem 'materialize-sass', '~> 1.0.0'
 gem 'material_icons'
 gem "font-awesome-rails"
 gem 'erb2haml'
+gem 'carrierwave'

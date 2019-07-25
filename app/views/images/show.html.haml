@@ -1,10 +1,10 @@
 = render partial: "header"
 .pickup-container2
-  .pickup_user_name #{@image.user.name}さん
-  = image_tag"/images/#{@image.image}", alt: "", class: "pickup-image"
+  .pickup_user_name #{@user.name}さん
+  = image_tag"/images/#{@user.images[0]&.image}", alt: "", class: "pickup-image"
   .pickup_date
-    #{@image.date}
+    #{@user.images[0]&.date}
   .pickup_user_album_name
-    = link_to user_album_show_path(@image.user) do
-      #{@image.user.name}さんのアルバムを見る
+    = link_to user_album_show_path(@user) do
+      #{@user.name}さんのアルバムを見る
 = render partial: "footer"

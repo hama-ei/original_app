@@ -1,0 +1,37 @@
+= render partial: "header"
+.pickup-container6
+  .pickup-container6__container
+    %h2.new_image_head 作品情報入力
+    = form_for @image do |f|
+
+      .field1
+        = f.label :"作品画像", class: "field"
+        %br/
+        = f.file_field :image ,class:"imageview"
+
+      .field2
+        = f.label :"生徒名", class: "field"
+        %br/
+        = f.collection_select :user_id, User.all, :id, :name,{prompt: '---'}, class: "select__default"
+
+      .field3
+        = f.label :"作品データ", class: "field"
+        %br/
+        %ul.date--field
+          %li.date--list
+            = f.select :date_year,[*(2019..2100)],prompt:"---", class: "date--select"
+          .date_year
+            年
+          %li.date--list
+            = f.select :date_month,[*(1..12)],prompt:"---", class: "date--select"
+          .date_month
+            月
+          %li.date--list
+            = f.select :date_day,[*(1..31)],prompt:"---", class: "date--select"
+          .date_day
+            日
+
+      .actions
+        = f.submit "アップロード",class: "image_submit"
+
+= render partial: "footer"
