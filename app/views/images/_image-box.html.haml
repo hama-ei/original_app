@@ -1,9 +1,7 @@
 %li.item-box
   = link_to image_path(user) do
-    = image_tag"/images/#{user.images[0]&.image}", alt: ""
+    = image_tag"#{user.images.order("created_at DESC")[0]&.image}", alt: ""
     .item-box-text
       .text-box
         %h4
           #{user.name}さん
-
-  

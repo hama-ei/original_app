@@ -1,6 +1,6 @@
 .album-box
   = link_to image_path(image) do
-    = image_tag"/images/#{image.image}", alt: "", class: "album_image"
+    = image_tag"#{@user.images.order("created_at DESC")[0]&.image}", alt: "", class: "album_image"
     .album-box-text
       .album-text-box
-        #{image.date}
+        #{@user.images[0]&.date_year}年#{@user.images[0]&.date_month}月#{@user.images[0]&.date_day}日
