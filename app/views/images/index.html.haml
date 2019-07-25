@@ -5,16 +5,16 @@
   %section.item-boxs
     %h3.pickup-days 月曜日のおけいこ
     %ul
-      - @images.where(class_day_id:1).each do |image|
-        = render partial: 'images/image-box', locals: {image:image}
-  %section.item-boxs
+      - @users.where(class_day_id:1).each do |user|
+        = render partial: 'images/image-box', locals: {user:user}
+  %section.item-boxs1
     %h3.pickup-days 火曜日のおけいこ
     %ul
-      - @images.where(class_day_id:2).limit(20).each do |image|
-        = render partial: 'images/image-box', locals: {image:image}
-  %section.item-boxs
+      - @users.where(class_day_id:2).each do |user|
+        = render partial: 'images/image-box', locals: {user:user}
+  %section.item-boxs2
     %h3.pickup-days 金曜日のおけいこ
     %ul
-      - @images.where(class_day_id:3).limit(20).each do |image|
-        = render partial: 'images/image-box', locals: {image:image}
+      - @users.where(class_day_id:3).each do |user|
+        = render partial: 'images/image-box', locals: {user:user}
 = render partial: "footer"

@@ -1,0 +1,91 @@
+.pickup-container6 {
+  background-color: #fbf8e9;
+  text-align: center;
+  margin:0 auto;
+  padding: 90px 296px 80px;
+  height: auto;
+  &__container{
+    background-color: white;
+  }
+}
+
+h2.new_image_head {
+  font-size: 40px;
+  margin: 0;
+  padding: 40px;
+}
+
+.field1{
+  width: 350px;
+  padding: 0 auto;
+  margin: 50px auto;
+  height: 120px;
+}
+
+.field2{
+  width: 350px;
+  padding: 0 auto;
+  margin: 50px auto;
+  height: 120px;
+}
+
+.field3{
+  width: 550px;
+  padding: 0 auto;
+  margin: 50px auto;
+  height: 200px;
+  // background: $filefield;
+  // border: 1px dashed $formborder;
+}
+
+input#image_image {
+  width: 265px;
+  margin: 40px;
+}
+
+select#image_user_id {
+  border: 1px solid darkgray;
+  width: 250px;
+  height: 50px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 2px;
+  background-color: white;
+}
+
+select#image_date_year,select#image_date_month,select#image_date_day {
+  position: relative;
+  border: 1px solid darkgray;
+  width: 90px;
+  height: 50px;
+  display: inline-block;
+  border-radius: 2px;
+  background-color: white;
+  margin: 14px;
+}
+
+ul.date--field {
+  position: relative;
+  width: 350px;
+  height: 75px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.date_year {
+  position: absolute;
+  top: 45px;
+  right: 225px;
+}
+
+.date_month {
+  position: absolute;
+  top: 43px;
+  right: 108px;
+}
+
+.date_day {
+  position: absolute;
+  top: 43px;
+  right: -10px;
+}

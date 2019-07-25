@@ -1,7 +1,5 @@
 class Image < ApplicationRecord
+  mount_uploader :image, ImagesUploader
   has_many   :likes
   belongs_to :user
-  belongs_to :grade
-  belongs_to :class_day
-  belongs_to :class_time
 end
