@@ -1,0 +1,7 @@
+= render partial: "images/header"
+.pickup-container6
+  %h5.comment-form お知らせ入力
+  = form_for @comment do |f|
+    = f.text_field :comment
+    = f.submit "SENT", class: "form_sent"
+= render partial: "images/footer"

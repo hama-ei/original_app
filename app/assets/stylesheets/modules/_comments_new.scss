@@ -1,0 +1,22 @@
+h5.comment-form {
+  margin: 20px;
+}
+
+textarea#body {
+  width: 750px;
+  height: 100px;
+  display: block;
+  margin: auto;
+  background-color: white;
+  border-radius: 10px;
+  border-color: lightgray;
+}
+
+input.form_sent {
+  margin: 30px;
+  height: 50px;
+  width: 130px;
+  background-color: #8bc34a;
+  color: white;
+  cursor: pointer;
+}

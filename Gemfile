@@ -74,3 +74,4 @@ gem "font-awesome-rails"
 gem 'erb2haml'
 gem 'carrierwave'
 gem 'simple_calendar', '~> 2.0'
+gem 'kaminari'
