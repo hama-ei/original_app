@@ -1,7 +1,7 @@
 class ImagesController < ApplicationController
 
   def index
-    @users = User.includes(:images)
+    @users = User.includes(:images).where("grade_id <= 14")
   end
 
   def show

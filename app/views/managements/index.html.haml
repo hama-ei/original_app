@@ -7,7 +7,7 @@
     = link_to "https://calendar.google.com/calendar/r/month", target: :_blank, class: "green-ribbon" do
       %h3.green-submanu スケジュール管理
   .ribbon-menu
-    .green-ribbon
+    = link_to new_comment_path, class: "green-ribbon" do
       %h3.green-submanu お知らせ入力
 
 = render partial: "images/footer"
