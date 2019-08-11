@@ -1,54 +1,36 @@
-.pickup-title{
-  height: 100px;
-  background-color: #fbf8e9;
-  position: relative;
+body{
+  background-color: #fdfbf2;
 }
 
-.pickup-container {
-  background-color: #fbf8e9;
+.image-container{
   text-align: center;
-  margin:0 auto;
-  padding: 40px 112px 40px;
+  margin: 0 auto;
+  padding: 100px 186px 80px;
+  color: brown;
+  font-size: 18px;
   display: flex;
-}
-
-.pickup-head {
-  position: absolute;
-  font-size: 30px;
-  color: #fff;
-  border: 2px dashed #ffecef;
-  background: #ffd4b9;
-  border-radius: 8px;
-  box-shadow: 0 0 3px 3px #f9c7b8;
-  text-align: center;
-  width: 500px;
-  bottom: 10px;
-  right: 0px;
-  left: 0px;
-  margin: auto;
-  height: 50px;
 }
 
 .item-box {
   margin:0 auto;
   float: left;
-  margin: 7px;
+  margin: 11px;
   position: relative;
-  height: 100px;
-  width: 100px;
+  height: 120px;
+  width: 120px;
   background-color: white;
   text-align: left;
   border-radius: 80px;
 }
 img.work_image {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   position: absolute;
   max-width: 100%;
   object-fit: cover;
   transform: rotate(90deg);
   border-radius: 80px;
-  transition: all 0.8s linear;
+  transition: all 0.5s linear;
   border: solid 5px;
   color: #f7eacd;
 }

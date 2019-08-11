@@ -10,15 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_21_161858) do
-
-  create_table "class_days", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "class_day", null: false
-  end
-
-  create_table "class_times", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.text "class_time", null: false
-  end
+ActiveRecord::Schema.define(version: 2019_08_01_144525) do
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "comment", null: false
@@ -37,6 +29,15 @@ ActiveRecord::Schema.define(version: 2019_07_21_161858) do
     t.integer "date_year", null: false
     t.integer "date_month", null: false
     t.integer "date_day", null: false
+    t.text "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "infomations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "date", null: false
+    t.string "title", null: false
+    t.text "body", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -53,8 +54,6 @@ ActiveRecord::Schema.define(version: 2019_07_21_161858) do
     t.string "name_kana", null: false
     t.string "encrypted_password", default: "", null: false
     t.integer "grade_id", null: false
-    t.integer "class_day_id", null: false
-    t.integer "class_time_id", null: false
     t.string "email", default: "", null: false
     t.text "telephone", null: false
     t.text "zip_code", null: false
@@ -66,6 +65,7 @@ ActiveRecord::Schema.define(version: 2019_07_21_161858) do
     t.datetime "updated_at", null: false
     t.datetime "remember_created_at"
     t.datetime "reset_password_sent_at"
+    t.string "class_name"
   end
 
 end

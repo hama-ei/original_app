@@ -1,21 +1,32 @@
 .nav-wrappers {
   position: relative;
-  min-height: 47px;
-  background-color: #ffd9f6;
+  min-height: 132px;
+  background-color: white;
 }
 nav .class-logo{
   position: absolute;
-  color: #fff;
-  display: inline-block;
-  font-size: 22px;
-  text-align: center;
-  padding: 0px;
-  width: 230px;
+    color: #7eb2e2;
+    display: inline-block;
+    font-size: 40px;
+    text-align: center;
+    width: 270px;
+    bottom: 52px;
+    left: 50px;
+    font-weight: bold;
+}
+.class-sublogo{
+  position: absolute;
+    color: #7eb2e2;
+    display: inline-block;
+    font-size: 18px;
+    text-align: center;
+    width: 270px;
+    bottom: 10px;
+    left: 50px;
 }
 ul.tabs.tabs-transparent {
-  width: 752px;
+  width: 952px;
   height: 50px;
-  margin: 0 0 0 310px;
 }
 .tabs .tabu a{
   display: block;
@@ -28,6 +39,9 @@ ul.tabs.tabs-transparent {
 }
 ul#nav-mobile {
   width: 240px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
 }
 
 .button{
@@ -36,10 +50,21 @@ ul#nav-mobile {
   width: 105px;
 }
 
+.button1{
+  transition: background-color .3s;
+  font-size: 1rem;
+  color: #73b2e2;
+  display: block;
+  padding: 0 15px;
+  cursor: pointer;
+  height: 60px;
+  width: 105px;
+}
+
 .button2{
   transition: background-color .3s;
   font-size: 1rem;
-  color: #fff;
+  color: #73b2e2;
   display: block;
   padding: 0 15px;
   cursor: pointer;
@@ -48,5 +73,12 @@ ul#nav-mobile {
 }
 
 .nav-content {
-  background-color: #fbe9d1eb;
+  background-color: #efe5b7;
+}
+
+.content {
+  background-image: url(color.jpg);
+  background-repeat: repeat-x;
+  background-position: bottom;
+  height: 10px;
 }
