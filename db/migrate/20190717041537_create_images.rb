@@ -6,6 +6,7 @@ class CreateImages < ActiveRecord::Migration[5.2]
       t.integer      :date_year,          null:false
       t.integer      :date_month,          null:false
       t.integer      :date_day,          null:false
+      t.text       :body
       t.timestamps
     end
   end

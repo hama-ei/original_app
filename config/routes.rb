@@ -7,13 +7,14 @@ Rails.application.routes.draw do
     get "/users/sign_out" => "devise/sessions#destroy"
   end
 
-  root 'images#index'
+  root 'homes#index'
 
   resources :images 
   resources :managements
   resources :schedules, only:[:index]
   resources :comments
-
+  resources :users
+  
   get "users/album", to: 'users#album_index', as: 'user_album_index'
   get "users/album/:id", to: 'users#album_show',  as: 'user_album_show'
   

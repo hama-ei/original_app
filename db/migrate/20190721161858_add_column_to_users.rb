@@ -1,6 +1,11 @@
 class AddColumnToUsers < ActiveRecord::Migration[5.2]
-  def change
-    add_column :users, :remember_created_at, :datetime
-    add_column :users, :reset_password_sent_at, :datetime
+  def up
+    add_column :users, :class_name, :string
   end
+
+  def down
+    remove_column :users, :class_day_id, :integer
+    remove_column :users, :class_time_id, :integer
+  end
+
 end

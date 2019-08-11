@@ -1,8 +1,7 @@
+.main-title
 = render partial: "header"
-.pickup-title
-  .pickup-head
-    みんなのしゃしん
-.pickup-container
+.pickup-head
+.image-container
   .item-boxs
     - @users.each do |user|
       = render partial: 'images/image-box', locals: {user:user}

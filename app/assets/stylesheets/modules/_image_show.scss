@@ -1,40 +1,46 @@
 .pickup-container2{
-  background-color: #fbf8e9;
-  height: 800px;
+  background-color: #fdfbf2;
+  height: 700px;
   position: relative;
 }
-.pickup_user_name {
-  width: 100%;
-  height: 100px;
-  font-size: 30px;
-  padding: 30px;
-  color: #a046a0;
-  font-weight: 600;
-  text-align: center;
+.pickup_image_box {
+  background-color: #fdfbf2;
+  height: 600px;
+  width: 650px;
 }
-.pickup_date{
-  width: 100vw;
-  height: 100px;
-  font-size: 30px;
-  text-align: center;
-}
+
 .pickup-image{
   position: absolute;
   width: 35%;
-  height: 50%;
-  max-width: 100%;
-  object-fit: cover;
-  transform: rotate(90deg);
-  border-radius: 20px;
-  top: 210px;
-  left: 0;
-  right: 0;
+  -o-object-fit: cover;
+  -webkit-transform: rotate(90deg);
+  top: 150px;
+  left: 230px;
   margin: auto;
+  border: 20px solid #ef775d;
+}
+.pickup_data{
+  color: rgb(29, 28, 28);
+  font-size: 20px;
+  padding: 40px 30px;
+  height: 489px;
+  width: 450px;
+  background-color: white;
+  position: absolute;
+  top: 91px;
+  border-radius: 60px;
+  right: 177px;
+  text-align: center;
+}
+p.date_title {
+  font-size: 25px;
+  font-weight: bold;
+  color: #962929;
 }
 
 .pickup_user_album_name {
   position: absolute;
-  bottom: 20px;
-  right: 120px;
+  bottom: 146px;
+  right: 224px;
   font-size: 20px;
 }
