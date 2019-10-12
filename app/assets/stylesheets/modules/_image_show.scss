@@ -1,35 +1,24 @@
 .pickup-container2{
   background-color: #fdfbf2;
-  height: 700px;
-  position: relative;
 }
+
 .pickup_image_box {
+  margin: 100px auto ;
+  text-align: center;
   background-color: #fdfbf2;
-  height: 600px;
-  width: 650px;
 }
 
 .pickup-image{
-  position: absolute;
-  width: 35%;
-  -o-object-fit: cover;
-  -webkit-transform: rotate(90deg);
-  top: 150px;
-  left: 230px;
-  margin: auto;
+  width: 350px;
   border: 20px solid #ef775d;
 }
 .pickup_data{
   color: rgb(29, 28, 28);
   font-size: 20px;
   padding: 40px 30px;
-  height: 489px;
-  width: 450px;
+  margin: 50px;
   background-color: white;
-  position: absolute;
-  top: 91px;
   border-radius: 60px;
-  right: 177px;
   text-align: center;
 }
 p.date_title {
@@ -39,8 +28,7 @@ p.date_title {
 }
 
 .pickup_user_album_name {
-  position: absolute;
-  bottom: 146px;
-  right: 224px;
   font-size: 20px;
+  margin: 0 0 50px;
+  text-align: center;
 }

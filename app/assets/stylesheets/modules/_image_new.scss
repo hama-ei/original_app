@@ -1,9 +1,7 @@
 .pickup-container6 {
-  background-color: #fbf8e9;
   text-align: center;
-  margin:0 auto;
-  padding: 90px 296px 80px;
-  height: auto;
+  margin: 35px auto;
+  width: 60%;
   &__container{
     background-color: white;
   }
@@ -15,32 +13,42 @@ h2.new_image_head {
   padding: 40px;
 }
 
+h4.new_image_head {
+  padding: 20px;
+}
+
+div#preview {
+  cursor: pointer;
+  height: 70px;
+}
+
 .field1 {
-  width: 370px;
-  padding: 0 auto;
-  margin: 50px auto;
-  height: 300px;
-  display: block;
-  position: relative;
+  margin: 30px;
+  height: 240px;
+  background-color: #f7f3f3;
 }
 
-img.imageview {
-  position: absolute;
-  left: 0;
-  right: 0;
+input#upload-image {
+  display: none;
+}
+
+img{
+  width: 150px;
+  transform: rotate(90deg);
+}
+
+.input-default {
+  display: none;
+}
+
+.dropzone-area{
+  background-color: #efeeea;
+  width: 80%;
   margin: auto;
-  top: 110px;
-}
-
-.field2{
-  width: 350px;
-  padding: 0 auto;
-  margin: 50px auto;
-  height: 120px;
+  cursor: pointer;
 }
 
 .field3{
-  width: 550px;
   padding: 0 auto;
   margin: 50px auto;
   height: 200px;
@@ -69,37 +77,30 @@ select#image_date_year,select#image_date_month,select#image_date_day {
   display: inline-block;
   border-radius: 2px;
   background-color: white;
-  margin: 14px;
 }
 
 ul.date--field {
-  position: relative;
-  width: 350px;
   height: 75px;
-  display: flex;
   margin: 0 auto;
 }
 
 .date_year {
-  position: absolute;
   top: 45px;
   right: 225px;
 }
 
 .date_month {
-  position: absolute;
   top: 43px;
   right: 108px;
 }
 
 .date_day {
-  position: absolute;
   top: 43px;
   right: -10px;
 }
 
 .image_submit{
-  height: 70px;
+  padding: 15px;
   width: 160px;
   background-color: #8bc34a;
   color: white;

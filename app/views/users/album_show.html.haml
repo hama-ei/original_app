@@ -3,4 +3,7 @@
   .pickup_user_name #{@user.name}さんのアルバム
   - @images.each do |image|
     = render partial: 'album-box', locals: {image:image}
+  .picture-button
+    = link_to images_path(@user) do
+      しゃしん一覧に戻る
 = render partial: "images/footer"

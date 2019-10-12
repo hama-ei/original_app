@@ -1,43 +1,26 @@
 .pickup-container7 {
   background-color: #fbf8e9;
   text-align: center;
-  margin: 0 auto;
-  padding: 90px 182px 80px;
   height: auto;
+  padding-bottom: 50px;
 }
 
 .comment_box {
-  height: 400px;
-  padding: 0.2em 0.5em;
-  margin: auto;
   color: #565656;
   background: #eeffee;
   box-shadow: 0px 0px 0px 10px #eaf7e8;
   border: dashed 2px #73a09e;
   border-radius: 8px;
-  width: 1000px;
+  width: 60%;
+  margin: 50px auto;
   &__title{
     font-size: 30px;
-    margin: 30px auto 0;
+    padding-top: 30px;
   }
-}
-
-.comment_box_list {
-  margin: 20px auto;
-  height: auto;
-  min-height: 200px;
-  width: 700px;
-  &__date{
-    float: left;
-    display: inline;
-    height: 100px;
-    padding: 40px 70px 40px 0;
+  &_date{
+    margin: 30px;
   }
-  &__body{
-    float: left;
-    padding: 40px 0 0 80px;
-    width: 550px;
-    height: 100px;
-    text-align: left;
+  &_body{
+    margin: 30px;
   }
 }
