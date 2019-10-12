@@ -1,15 +1,16 @@
 = render partial: "header"
 .pickup-container6
   .pickup-container6__container
-    %h2.new_image_head 作品情報入力
-    = form_for @image do |f|
+    %h4.new_image_head 作品情報入力
+    = form_for @image, html: {class: "sell-form dropzone", id: "item-dropzone"} do |f|
 
       .field1
-        = f.label :"作品画像", class: "field"
-        %br/
-        = f.file_field :image, class: "field"
-        .imageview
-          = image_tag @image.image.to_s, class: "imageview"
+        = f.label :image, class: "pload__drop__box__preview" do
+          .upload__drop__box__imageview
+            = f.file_field :image, class:"file",style:"display:none;"
+            %pre
+              #preview
+                クリックしてファイルをアップロード
       .field2
         = f.label :"生徒名", class: "field"
         %br/

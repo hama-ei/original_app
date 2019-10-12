@@ -1,4 +1,4 @@
-.color-container
+= render partial: "images/header"
 .signup-container
   .signup-container2
     .signup_title 登録フォーム
@@ -31,16 +31,6 @@
         = f.collection_select :grade_id, Grade.all, :id, :grade,{prompt: '選択してください'}, class: "form-choice"
 
       .field
-        = f.label :お稽古の曜日, class: "field"
-        %br/
-        = f.collection_select :class_day_id, ClassDay.all, :id, :class_day,{prompt: '選択してください'}, class: "form-choice"
-
-      .field
-        = f.label :お稽古の時間, class: "field"
-        %br/
-        = f.collection_select :class_time_id, ClassTime.all, :id, :class_time,{prompt: '選択してください'}, class: "form-choice"
-
-      .field
         = f.label :メールアドレス, class: "field"
         %br/
         = f.email_field :email, autofocus: true, autocomplete: "email"
@@ -60,21 +50,7 @@
         %br/
         = f.text_field :address, palceholder: "入力してください"
 
-      .field
-        = f.label :誕生日, class: "field"
-        %br/
-        %ul.birth--field
-          %li.birth--list
-            .birth--select
-              = f.select :birth_month,[*(1..12)],prompt:"---"
-            .birth_month
-              月
-          %li.birth--list
-            .birth--select
-              = f.select :birth_day,[*(1..31)],prompt:"---"
-            .birth_day
-              日
       .actions
         = f.submit "Sign up",class: :sign_submit
 
-.color-container
+= render partial: "images/footer"

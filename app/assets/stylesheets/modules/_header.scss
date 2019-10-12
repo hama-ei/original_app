@@ -1,47 +1,50 @@
 .nav-wrappers {
-  position: relative;
   min-height: 132px;
   background-color: white;
 }
 nav .class-logo{
-  position: absolute;
-    color: #7eb2e2;
-    display: inline-block;
-    font-size: 40px;
-    text-align: center;
-    width: 270px;
-    bottom: 52px;
-    left: 50px;
-    font-weight: bold;
+  height: 70px;
+  padding: 20px;
+  color: #7eb2e2;
+  display: block;
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
 }
 .class-sublogo{
-  position: absolute;
-    color: #7eb2e2;
-    display: inline-block;
-    font-size: 18px;
-    text-align: center;
-    width: 270px;
-    bottom: 10px;
-    left: 50px;
+  color: #7eb2e2;
+  display: block;
+  font-size: 18px;
+  text-align: center;
 }
 ul.tabs.tabs-transparent {
-  width: 952px;
   height: 50px;
 }
 .tabs .tabu a{
   display: block;
   width: 100%;
   height: 50px;
-  padding: 15px 60px;
+  padding: 13px 85px;
   font-size: 16px;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 ul#nav-mobile {
-  width: 240px;
   position: absolute;
   right: 0px;
   bottom: 0px;
+}
+
+nav ul .tabu2 a {
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+  font-size: 1rem;
+  padding: 15px 60px;
+  color: #fff;
+  cursor: pointer;
 }
 
 .button{
@@ -50,27 +53,6 @@ ul#nav-mobile {
   width: 105px;
 }
 
-.button1{
-  transition: background-color .3s;
-  font-size: 1rem;
-  color: #73b2e2;
-  display: block;
-  padding: 0 15px;
-  cursor: pointer;
-  height: 60px;
-  width: 105px;
-}
-
-.button2{
-  transition: background-color .3s;
-  font-size: 1rem;
-  color: #73b2e2;
-  display: block;
-  padding: 0 15px;
-  cursor: pointer;
-  height: 60px;
-  width: 90px;
-}
 
 .nav-content {
   background-color: #efe5b7;

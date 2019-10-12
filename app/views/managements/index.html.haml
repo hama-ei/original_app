@@ -1,7 +1,7 @@
 = render partial: "images/header"
 .pickup-container5
   .ribbon-menu
-    = link_to new_image_path, class: "green-ribbon" do
+    = link_to new_image_path, class: "green-ribbon", data: {"turbolinks" => false} do
       %h3.green-submanu 作品アップロード
   .ribbon-menu
     = link_to "https://calendar.google.com/calendar/r/month", target: :_blank, class: "green-ribbon" do

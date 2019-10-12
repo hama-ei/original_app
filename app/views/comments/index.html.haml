@@ -1,10 +1,10 @@
 = render partial: "images/header"
 .pickup-container7
-  .comment_box
-    .comment_box__title お知らせ
-    - @comments.each do |comment|
-      .comment_box_list
-        .comment_box_list__date #{comment.created_at.strftime('%Y/%m/%d')}
-        .comment_box_list__body #{comment.comment}
+  .comment_box__title お知らせ
+  - @comments.each do |comment|
+    .comment_box
+      .comment_box_date #{comment.created_at.strftime('%Y/%m/%d')}
+      .comment_box_body 
+        = simple_format(comment.comment)
 
 = render partial: "images/footer"

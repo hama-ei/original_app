@@ -3,31 +3,26 @@ body{
 }
 
 .image-container{
-  text-align: center;
-  margin: 0 auto;
-  padding: 100px 186px 80px;
-  color: brown;
-  font-size: 18px;
-  display: flex;
+  display: -webkit-box;
+  margin: 30px 0;
 }
 
 .item-box {
   margin:0 auto;
   float: left;
-  margin: 11px;
+  margin: 10px;
   position: relative;
-  height: 120px;
-  width: 120px;
+  height: 104px;
+  width: 104px;
   background-color: white;
   text-align: left;
   border-radius: 80px;
 }
 img.work_image {
-  width: 120px;
-  height: 120px;
+  width: 104px;
+  height: 104px;
   position: absolute;
   max-width: 100%;
-  object-fit: cover;
   transform: rotate(90deg);
   border-radius: 80px;
   transition: all 0.5s linear;
