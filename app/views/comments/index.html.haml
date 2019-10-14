@@ -6,5 +6,8 @@
       .comment_box_date #{comment.created_at.strftime('%Y/%m/%d')}
       .comment_box_body 
         = simple_format(comment.comment)
+      .comment_box_delete
+        = link_to comment_path(comment), method: :delete do
+          削除する
 
 = render partial: "images/footer"

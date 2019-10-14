@@ -1,22 +1,23 @@
 class CommentsController < ApplicationController
 
   def index
-    @comments = Comment.includes(:user).page(params[:page]).per(5).order("created_at DESC")
+    @comments = Comment.page(params[:page]).per(5).order("created_at DESC")
   end
 
   def new
-    @comment = current_user.comments.new
+    @comment = Comment.new
   end
 
   def create
-    @comment = current_user.comments.new(comment_params)
+    @comment = Comment.new(comment_params)
     @comment.save
     redirect_to root_path
   end
 
   def destroy
     @comment = Comment.find(params[:id])
-    .destroy
+    @comment.destroy
+    redirect_to root_path
   end
 
   def edit
@@ -30,7 +31,7 @@ class CommentsController < ApplicationController
 
   private
   def comment_params
-    params.require(:comment).permit(:comment, :user_id)
+    params.require(:comment).permit(:comment)
   end
 
 end
