@@ -74,3 +74,8 @@ gem 'erb2haml'
 gem 'carrierwave'
 gem 'simple_calendar', '~> 2.0'
 gem 'kaminari'
+gem 'bundler', '2.0.1'
+
+group :production do
+  gem 'pg'
+end
