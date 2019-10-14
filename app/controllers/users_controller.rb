@@ -17,6 +17,9 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    @user =User.includes(:images).find(params[:id])
+    @user.destroy
+    redirect_to root_path
   end
   
   def album_index

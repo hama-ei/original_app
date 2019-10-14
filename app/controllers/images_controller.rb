@@ -20,8 +20,9 @@ class ImagesController < ApplicationController
   end
 
   def destroy
-    @user =User.includes(:images).find(params[:id])
-    @user.destroy
+    @user = User.includes(:images).find(params[:id])
+    @image = @user.images.order("created_at DESC")[0]
+    @image.destroy
     redirect_to root_path
   end
 
