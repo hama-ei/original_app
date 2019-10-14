@@ -1,0 +1,13 @@
+= render partial: "images/header"
+.pickup-container7
+  .comment_box__title お知らせ
+  - @comments.each do |comment|
+    .comment_box
+      .comment_box_date #{comment.created_at.strftime('%Y/%m/%d')}
+      .comment_box_body 
+        = simple_format(comment.comment)
+      .comment_box_delete
+        = link_to comment_path(comment), method: :delete, data: { confirm: '本当に削除しますか？' } do
+          削除する
+
+= render partial: "images/footer"

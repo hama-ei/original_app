@@ -1,13 +1,15 @@
 = render partial: "images/header"
 .pickup-container5
   .ribbon-menu
-    = link_to new_image_path, class: "green-ribbon" do
-      %h3.green-submanu 作品アップロード
+    = link_to new_user_path,  class: "green-ribbon" do
+      %h3.green-submanu 新規登録
+  .ribbon-menu
+    = link_to new_image_path, class: "green-ribbon", data: {"turbolinks" => false} do
+      %h3.green-submanu 作品登録
   .ribbon-menu
     = link_to "https://calendar.google.com/calendar/r/month", target: :_blank, class: "green-ribbon" do
-      %h3.green-submanu スケジュール管理
+      %h3.green-submanu 予定管理
   .ribbon-menu
-    .green-ribbon
-      %h3.green-submanu お知らせ入力
-
+    = link_to new_comment_path, class: "green-ribbon" do
+      %h3.green-submanu お知らせ
 = render partial: "images/footer"

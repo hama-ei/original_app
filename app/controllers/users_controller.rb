@@ -1,5 +1,27 @@
 class UsersController < ApplicationController
 
+  def index
+  end
+
+  def show
+    @user = User.find(params[:id])
+  end
+
+  def new
+    @user = User.new
+  end
+
+  def create
+    @user = User.create(user_params)
+    redirect_to root_path
+  end
+
+  def destroy
+    @user =User.includes(:images).find(params[:id])
+    @user.destroy
+    redirect_to root_path
+  end
+  
   def album_index
     @users = User.all
   end
@@ -12,6 +34,6 @@ class UsersController < ApplicationController
   private
   def user_params
     params.require(:user).permit(
-      :name, :name_kana, :password, :grade_year, :class_day_id, :class_time_id, :email, :telephone, :zip_code, :adress, :introduction, :birth_month, :birth_day, :created_at, :updated_at)
+      :name, :name_kana, :created_at, :updated_at)
   end
 end

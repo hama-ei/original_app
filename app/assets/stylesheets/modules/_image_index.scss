@@ -1,64 +1,45 @@
-.pickup-container {
+body{
   background-color: #fbf8e9;
-  text-align: center;
-  margin:0 auto;
-  padding: 0 150px 40px;
-  height: 3000px;
-
-}
-.pickup-head {
-  font-size: 35px;
-  font-weight: 800;
-  color: orange;
-  padding-top: 50px;
-  margin: 0;
-  letter-spacing: 11px;
+  height: 100%;
 }
 
-h3.pickup-days {
-  letter-spacing: 2px;
-  margin: 35px 0 35px;
-  font-size: 28px;
-  font-weight: 800;
-  height: 28px;
-  color: lightseagreen;
-  text-decoration: none;
-}
-
-section.item-boxs{
-  min-height: 830px;
-  padding: 0 58px;
-}
-section.item-boxs1{
-  min-height: 1080px;
-  padding: 0 58px;
-}
-section.item-boxs2{
-  min-height: 950px;
-  padding: 0 58px;
+.image-container{
+  display: -webkit-box;
+  margin: 30px 0;
 }
 
 .item-box {
   margin:0 auto;
   float: left;
-  margin: 10px 10px;
+  margin: 10px;
   position: relative;
-  height: 230px;
-  width: 170px;
+  height: 104px;
+  width: 104px;
   background-color: white;
   text-align: left;
-  border-radius: 20px;
+  border-radius: 80px;
 }
-img {
-  width: 170px;
-  height: 170px;
+img.work_image {
+  width: 104px;
+  height: 104px;
   position: absolute;
   max-width: 100%;
-  object-fit: cover;
   transform: rotate(90deg);
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-radius: 80px;
+  transition: all 0.5s linear;
+  border: solid 5px;
+  color: #f7eacd;
 }
+img.work_image:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2) rotate(90deg);
+}
+
+
+
 
 a {
   text-decoration: none;

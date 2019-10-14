@@ -1,0 +1,31 @@
+.pickup-container7 {
+  background-color: #fbf8e9;
+  text-align: center;
+  height: auto;
+  padding-bottom: 50px;
+}
+
+.comment_box {
+  color: #565656;
+  background: #eeffee;
+  box-shadow: 0px 0px 0px 10px #eaf7e8;
+  border: dashed 2px #73a09e;
+  border-radius: 8px;
+  width: 60%;
+  margin: 50px auto;
+  &__title{
+    font-size: 30px;
+    padding-top: 30px;
+  }
+  &_date{
+    margin: 30px;
+  }
+  &_body{
+    margin: 30px;
+  }
+}
+
+.comment_box_delete {
+  text-align: right;
+  padding: 0 10px;
+}

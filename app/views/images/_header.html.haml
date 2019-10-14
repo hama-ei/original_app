@@ -1,27 +1,15 @@
-%nav.nav-extended.light-green
+%nav.nav-extended
   .nav-wrappers
-    %a.class-logo{href: "/"} きょうしつのサイト
-    %a.sidenav-trigger{"data-target" => "mobile-demo", :href => "#"}
-      %i.material-icons menu
-    %ul#nav-mobile.right.hide-on-med-and-down
-      - if user_signed_in?
-        %li
-          .button
-        %li
-          %a{href: "/users/sign_out" ,method: "delete"} ログアウト
-      -else
-        %li
-          %a.button2{href: "/users/sign_up"} 新規登録
-        %li
-          %a.button2{href: "/users/sign_in",method: :post} ログイン
-      
+    %a.class-logo{href: "/"} JOY LESSON
+    .class-sublogo たのしいを共有しよう !
+  .content
   .nav-content
     %ul.tabs.tabs-transparent
       %li.tabu
-        %a{:href => "#test1"} お知らせ
+        %a{href: "/images"} しゃしん
       %li.tabu
-        %a{href: "/schedules"} おけいこ日
+        %a{href: "/comments"} お知らせ
       %li.tabu
-        %a{href: "/users/album"} アルバム
+        %a{href: "/schedules"} お稽古日
       %li.tabu
         %a{href: "/managements"} 先生管理

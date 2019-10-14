@@ -2,29 +2,33 @@
   background-color: #fbf8e9;
   text-align: center;
   margin:0 auto;
-  padding: 0 150px 40px;
-  height: 1000px;
 }
-.album-box{
-  position: relative;
-  margin: 0 auto;
-  float: left;
-  margin: 10px 40px;
-  position: relative;
-  height: 250px;
-  width: 210px;
-  background-color: white;
-  text-align: left;
-  border-radius: 20px;
+
+.pickup_user_name {
+  text-align: center;
+  height: 110px;
+  font-size: 25px;
+  padding: 50px;
+  color: #af4d4d;
 }
-img.album_image{
-  height: 210px;
+
+img.album_image {
+  height: 180px;
   width: 210px;
+  margin: 30px 50px;
 }
 
 .album-text-box{
-  position: absolute;
-  bottom: 10px;
-  left: 58px;
+  padding: 0 0 40px 0;
   color: black;
+}
+
+.album-box {
+  display: inline-block;
+}
+
+.picture-button {
+  font-size: 20px;
+  padding: 0 0 50px;
+  text-align: center;
 }

@@ -1,20 +1,8 @@
+.main-title
 = render partial: "header"
-%section.pickup-container
-  %h2.pickup-head
-    &#x2b50;&#x2b50;&#x2b50;&#x2b50;&#x2b50;  今週のいちばん  &#x2b50;&#x2b50;&#x2b50;&#x2b50;&#x2b50;
-  %section.item-boxs
-    %h3.pickup-days 月曜日のおけいこ
-    %ul
-      - @users.where(class_day_id:1).each do |user|
-        = render partial: 'images/image-box', locals: {user:user}
-  %section.item-boxs1
-    %h3.pickup-days 火曜日のおけいこ
-    %ul
-      - @users.where(class_day_id:2).each do |user|
-        = render partial: 'images/image-box', locals: {user:user}
-  %section.item-boxs2
-    %h3.pickup-days 金曜日のおけいこ
-    %ul
-      - @users.where(class_day_id:3).each do |user|
-        = render partial: 'images/image-box', locals: {user:user}
+.pickup-head
+.image-container
+  .item-boxs
+    - @users.each do |user|
+      = render partial: 'images/image-box', locals: {user:user}
 = render partial: "footer"
