@@ -9,6 +9,6 @@
     = link_to user_album_show_path(@user) do
       アルバムを見る
   .pickup_user_delete
-    = link_to image_path(@user), method: :delete do
+    = link_to image_path(@user), method: :delete, data: { confirm: '本当に削除しますか？' } do
       削除する
 = render partial: "footer"

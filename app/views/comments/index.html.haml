@@ -7,7 +7,7 @@
       .comment_box_body 
         = simple_format(comment.comment)
       .comment_box_delete
-        = link_to comment_path(comment), method: :delete do
+        = link_to comment_path(comment), method: :delete, data: { confirm: '本当に削除しますか？' } do
           削除する
 
 = render partial: "images/footer"
