@@ -1,0 +1,19 @@
+= render partial: "images/header"
+.signup-container
+  .signup-container2
+    .signup_title 登録フォーム
+    = form_for @user do |f|
+      .field
+        = f.label :お名前, class: "field"
+        %br/
+        = f.text_field :name, palceholder:"入力してください"
+
+      .field
+        = f.label :"お名前(カナ)", class: "field"
+        %br/
+        = f.text_field :name_kana, palceholder:"入力してください"
+
+      .actions
+        = f.submit "登録する",class: :sign_submit
+
+= render partial: "images/footer"

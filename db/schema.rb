@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_01_144525) do
+ActiveRecord::Schema.define(version: 2019_07_17_043600) do
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "comment", null: false
@@ -34,14 +34,6 @@ ActiveRecord::Schema.define(version: 2019_08_01_144525) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "infomations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "date", null: false
-    t.string "title", null: false
-    t.text "body", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "image_id", null: false
     t.integer "user_id", null: false
@@ -52,20 +44,8 @@ ActiveRecord::Schema.define(version: 2019_08_01_144525) do
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "name_kana", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.integer "grade_id", null: false
-    t.string "email", default: "", null: false
-    t.text "telephone", null: false
-    t.text "zip_code", null: false
-    t.string "address", null: false
-    t.text "introduction"
-    t.integer "birth_month", null: false
-    t.integer "birth_day", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "remember_created_at"
-    t.datetime "reset_password_sent_at"
-    t.string "class_name"
   end
 
 end

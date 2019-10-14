@@ -1,7 +1,7 @@
 class ImagesController < ApplicationController
 
   def index
-    @users = User.includes(:images).where("grade_id <= 14")
+    @users = User.includes(:images)
   end
 
   def show
@@ -19,11 +19,17 @@ class ImagesController < ApplicationController
     redirect_to root_path
   end
 
+  def destroy
+    @user =User.includes(:images).find(params[:id])
+    @user.destroy
+    redirect_to root_path
+  end
+
   private
 
   def user_params
     params.require(:user).permit(
-      :name, :name_kana, :password, :grade_year, :class_day_id, :class_time_id, :email, :telephone, :zip_code, :adress, :introduction, :birth_month, :birth_day, :created_at, :updated_at)
+      :name, :name_kana, :password, :email, :telephone, :zip_code, :adress, :introduction, :birth_month, :birth_day, :created_at, :updated_at)
   end
 
   def image_params
