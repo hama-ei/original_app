@@ -75,7 +75,7 @@ gem 'erb2haml'
 gem 'carrierwave'
 gem 'simple_calendar', '~> 2.0'
 gem 'kaminari'
-gem 'fog'
+gem 'fog-aws'
 
 group :production do
   gem 'pg'
