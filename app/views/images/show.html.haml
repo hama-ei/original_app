@@ -4,7 +4,7 @@
     = image_tag"#{@user.images.order("created_at DESC")[0]&.image}", alt: "", class: "pickup-image"
   .pickup_data
     %p.date_title #{@user.name}さん
-    %p.date_ &#x1f338;日付&#x1f338;</br>#{@user.images[0]&.date_year}年#{@user.images[0]&.date_month}月#{@user.images[0]&.date_day}日</br>
+    %p.date_ &#x1f338;日付&#x1f338;</br>#{@user.images.order("created_at DESC")[0]&.date_year}年#{@user.images.order("created_at DESC")[0]&.date_month}月#{@user.images.order("created_at DESC")[0]&.date_day}日</br>
   .pickup_user_album_name
     = link_to user_album_show_path(@user) do
       アルバムを見る
