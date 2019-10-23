@@ -6,15 +6,15 @@
   .nav-content
     %ul.tabs.tabs-transparent
       %li.tabu
-        -# %a{href: "/users/#{current_user.id}"} マイページ
-      %li.tabu
         %a{href: "/images"} しゃしん
       %li.tabu
         %a{href: "/comments"} お知らせ
       %li.tabu
         %a{href: "/schedules"} お稽古日
       %li.tabu
-    %ul#nav-mobile.right.hide-on-med-and-down
+        %a{href: "/managements"} 先生管理
+        -# %li.tabu2
+    -# %ul#nav-mobile.right.hide-on-med-and-down
       -# - if user_signed_in?
       -#   %li.tabu2
       -#     %a(style="display: none;")
