@@ -27,10 +27,6 @@
             = f.select :date_month,[*(1..12)],prompt:"---", class: "date--select"
           .date_month
             月
-          %li.date--list
-            = f.select :date_day,[*(1..31)],prompt:"---", class: "date--select"
-          .date_day
-            日
 
       .actions
         = f.submit "アップロード",class: "image_submit"
