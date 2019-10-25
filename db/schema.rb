@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(version: 2019_07_17_043600) do
     t.integer "user_id", null: false
     t.integer "date_year", null: false
     t.integer "date_month", null: false
-    t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
