@@ -1,5 +1,7 @@
 = render partial: "images/header"
 .pickup-container6
+  - if @comment.errors.any?
+    %p.error_message 入力をご確認ください
   %h5.comment-form お知らせ入力
   = form_for @comment do |f|
     = f.text_area :comment

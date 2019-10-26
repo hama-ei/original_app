@@ -1,6 +1,8 @@
 = render partial: "header"
 .pickup-container6
   .pickup-container6__container
+    - if @image.errors.any?
+      %p.error_message 入力をご確認ください
     %h4.new_image_head 作品情報入力
     = form_for @image, html: {class: "sell-form dropzone", id: "item-dropzone"} do |f|
 

@@ -1,6 +1,8 @@
 = render partial: "images/header"
 .signup-container
   .signup-container2
+    - if @user.errors.any?
+      %p.error_message 入力をご確認ください
     .signup_title 登録フォーム
     = form_for @user do |f|
       .field
@@ -9,7 +11,7 @@
         = f.text_field :name, palceholder:"入力してください"
 
       .field
-        = f.label :"お名前(カナ)", class: "field"
+        = f.label :"お名前(かな)", class: "field"
         %br/
         = f.text_field :name_kana, palceholder:"入力してください"
 

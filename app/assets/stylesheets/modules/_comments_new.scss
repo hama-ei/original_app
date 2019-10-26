@@ -1,5 +1,5 @@
 h5.comment-form {
-  margin: 20px;
+  padding: 20px;
 }
 
 textarea#body {
@@ -13,6 +13,7 @@ textarea#body {
 }
 
 textarea#comment_comment {
+  width: 90%;
   border-color: #54313d;
   background-color: #fbfaf4;
   height: 100px;
