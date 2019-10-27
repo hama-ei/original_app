@@ -24,7 +24,6 @@ img.work_image {
   height: 104px;
   position: absolute;
   max-width: 100%;
-  transform: rotate(90deg);
   border-radius: 80px;
   transition: all 0.5s linear;
   border: solid 5px;
@@ -35,11 +34,8 @@ img.work_image:hover {
   -moz-transform: scale(1.2);
   -o-transform: scale(1.2);
   -ms-transform: scale(1.2);
-  transform: scale(1.2) rotate(90deg);
+  transform: scale(1.2);
 }
-
-
-
 
 a {
   text-decoration: none;

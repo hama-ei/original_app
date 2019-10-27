@@ -77,6 +77,7 @@ gem 'simple_calendar', '~> 2.0'
 gem 'kaminari'
 gem 'fog-aws'
 gem "aws-sdk-s3"
+gem 'mini_magick'
 group :production do
   gem 'pg'
 end
