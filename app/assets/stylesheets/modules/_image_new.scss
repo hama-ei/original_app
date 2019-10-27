@@ -37,6 +37,10 @@ img{
   width: 150px;
 }
 
+img.uploadimg {
+  transform: rotate(90deg);
+}
+
 .input-default {
   display: none;
 }
